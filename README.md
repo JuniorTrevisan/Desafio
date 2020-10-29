@@ -1,5 +1,5 @@
 # Desafio
-Desafio de técnico contemplando exercícios em PHP 
+Desafio técnico contemplando exercícios em PHP 
 
 PHP - Exercícios
 
