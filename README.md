@@ -61,12 +61,12 @@ Saida experada:
 
 7 - Crie uma API simples para manipular uma lista de usuários contendo os campos (Nome, Sobrenome, Email & Telefone.). Essa API deverá conter os requisitos abaixo:
 
-Dados deverão ser salvos em um arquivo de texto
-Usar Rest API
-Criar Endpoint para listar todos os usuarios
-Criar Endpoint para deletar usuarios por email
-Criar Endpoint para adicionar um usuario novo
-Criar Endpoint para atualizar os dados do usuario.
-Prover documentacao minima para usar a API.
+- Dados deverão ser salvos em um arquivo de texto
+- Usar Rest API
+- Criar Endpoint para listar todos os usuarios
+- Criar Endpoint para deletar usuarios por email
+- Criar Endpoint para adicionar um usuario novo
+- Criar Endpoint para atualizar os dados do usuario.
+- Prover documentacao minima para usar a API.
 
 - Resposta 7 - na pasta raiz
