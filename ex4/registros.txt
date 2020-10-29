@@ -1,0 +1,6 @@
+1|Claudemir|Trevisan|trevisan_jr@yahoo.com.br|(19)9814-96464|trevisan|e10adc3949ba59abbe56e057f20f883e
+2|Manoel|Silva|ms@uol.com.br|(19)3245-6767|manoel|75ce8d1e65d9bf98d53ba992e6059e1c
+3|Pedro|Nogueira|pn@terra.com.br|(19)3266-6888|pnogueira|a3ce222eaba41b9e4b3309c44912378f
+4|Miguel|Azevedo|mazevedo@maz.com.br|(19)3999-6999|mazevedo|53c29711188a8b97d687bb7c1ba43042
+5|Miguelyty|Azevedo|mazevedrrrro@maz.com.br|(19)3999-6666|mazevedo666|0972171f2e59277af02fc1e352c07e90
+6|Lucas|Rocha|lucas_rocha@teste.com.br|(19)9844-67678|lucas4|b66dc44cd9882859d84670604ae276e6

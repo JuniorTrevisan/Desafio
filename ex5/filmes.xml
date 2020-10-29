@@ -1,0 +1,52 @@
+<filmes>
+    <filme id="1">
+        <titulo>The Godfather (O Poderoso Chefão)</titulo>
+        <resumo>Baseado no livro homônimo escrito por Mario Puzo</resumo>
+        <genero>Drama/Crime</genero>        
+        <elenco>
+            <ator>Marlon Brando</ator>
+            <ator>Al Pacino</ator>
+            <ator>James Caan</ator>
+        </elenco>
+    </filme>
+    <filme id="2">
+        <titulo>The Warriors</titulo>
+        <resumo>Um bando chamado de Os Selvagens da Noite é acusado da morte do líder da assembleia de todas as gangues de rua e é perseguido por vingança. Eles têm que cruzar a cidade e atravessar zonas de gangues inimigas para conseguir voltar ao seu território.</resumo>
+        <genero>Ação</genero>        
+        <elenco>
+            <ator>Michael Beck</ator>
+            <ator>James Remar</ator>
+            <ator>Dorsey Wright</ator>
+        </elenco>
+    </filme>
+    <filme id="3">
+        <titulo>Trainspotting</titulo>
+        <resumo>O filme conta as histórias de viciados em heroína que vivem num subúrbio de Edimburgo, Escócia, narradas do ponto de vista de um deles, Renton.</resumo>
+        <genero>Drama</genero>        
+        <elenco>
+            <ator>Ewan McGregor</ator>
+            <ator>Ewen Bremner</ator>
+            <ator>Jonny Lee Miller</ator>
+        </elenco>
+    </filme>
+    <filme id="4">
+        <titulo>Snatch (Porcos e Diamantes)</titulo>
+        <resumo>Três grupos de vilões tentam recuperar um diamante desaparecido. Turkish e Tommy se juntam a um pugilista cigano chamado Mickey para lutas de boxe ilegais. Seus oponentes fazem apostas com um envolvido no roubo do diamante, e para complicar, um detetive de Nova York entra em cena.</resumo>
+        <genero>Crime/Comédia</genero>        
+        <elenco>
+            <ator>Benicio Del Toro</ator>
+            <ator>Brad Pitt</ator>
+            <ator>Jason Statham</ator>
+        </elenco>
+    </filme>
+    <filme id="5">
+        <titulo>Fight Club (Clube da Luta)</titulo>
+        <resumo>Um homem deprimido que sofre de insônia conhece um estranho vendedor chamado Tyler Durden e se vê morando em uma casa suja depois que seu perfeito apartamento é destruído. A dupla forma um clube com regras rígidas onde homens lutam. A parceria perfeita é comprometida quando uma mulher, Marla, atrai a atenção de Tyler.</resumo>
+        <genero>Drama</genero>        
+        <elenco>
+            <ator>Edward Norton</ator>
+            <ator>Brad Pitt</ator>
+            <ator>Helena Bonham Carter</ator>
+        </elenco>
+    </filme>
+</filmes>
