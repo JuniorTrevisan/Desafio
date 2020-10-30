@@ -91,11 +91,10 @@
          * @author Claudemir Trevisan
          * Função para alterar um unico usuario pelo seu id
          * @param: $id       int  -  id do usuario.       
-         * @param: $dados         obj       -   contendo : nome, sobrenome, email, telefone, login e senha do usuario
+         * @param: $dados    obj  -   contendo : nome, sobrenome, email, telefone, login e senha do usuario
          */ 
-        public function upUser($id,$dados){
-            $array_dados = json_decode($dados);                  
-            $data = $id . '|' . $array_dados->nome . '|' . $array_dados->sobrenome . '|' . $array_dados->email . '|' . $array_dados->telefone . '|' . $array_dados->login . '|' . md5($array_dados->senha) ."\n";
+        public function upUser($id,$dados){           
+            $data = $id . '|' . $dados['nome'] . '|' . $dados['sobrenome'] . '|' . $dados['email'] . '|' . $dados['telefone'] . '|' . $dados['login'] . '|' . md5($dados['senha']) ."\n";
             $arq = fopen('arquivo.txt', 'r');        
             $ct_lin = 1;
             $ct_up = 0;    
@@ -136,10 +135,9 @@
                 fgets($arq); 
                 $linhas++; 
             }                   
-            fclose($arq); 
-            $array_dados = json_decode($dados);                  
-            $data = $linhas . '|' . $array_dados->nome . '|' . $array_dados->sobrenome . '|' . $array_dados->email . '|' . $array_dados->telefone . '|' . $array_dados->login . '|' . md5($array_dados->senha) ."\n";    
-            $arq2 = fopen("arquivo.txt", "a");                 
+            fclose($arq);                         
+            $data = $linhas . '|' . $dados['nome'] . '|' . $dados['sobrenome'] . '|' . $dados['email'] . '|' . $dados['telefone'] . '|' . $dados['login'] . '|' . md5($dados['senha']) ."\n";
+            $arq2 = fopen('arquivo.txt', 'a'); 
             fwrite($arq2,$data);
             fclose($arq2);            
             echo 'Registro Inserido com Sucesso!';             
