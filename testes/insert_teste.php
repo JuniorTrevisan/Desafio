@@ -13,13 +13,15 @@ $data = array(
 
 print_r($data);
 $content = json_encode($data); 
-$content = base64_encode($content);
-echo $url3 = "http://localhost/desafio/user/insert/".$content; 
+
+echo $url3 = "http://localhost/desafio/user/insert/"; 
 
 $curl = curl_init($url3);
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($curl, CURLOPT_POST, true);
+curl_setopt($curl, CURLOPT_POSTFIELDS, $content);
 curl_setopt($curl, CURLOPT_HTTPHEADER, array(
    'Content-Type: application/json',
    'Accept: application/json',
