@@ -5,7 +5,7 @@ RewriteEngine on
 # map neat URL to internal URL
 
 RewriteRule ^user/list/?$ RestController.php?view=all [nc,qsa]
-RewriteRule ^user/insert/(.*)/?$ RestController.php?view=insert&dados=$1  [nc,qsa]
+RewriteRule ^user/insert/?$ RestController.php?view=insert [nc,qsa]
 RewriteRule ^user/show/([0-9]+)/?$ RestController.php?view=single&id=$1 [nc,qsa]
 RewriteRule ^user/delete/(.*)/?$ RestController.php?view=delete&email=$1 [nc,qsa]
-RewriteRule ^user/update/([0-9]+)/(.*)/?$ RestController.php?view=update&id=$1&dados=$2 [nc,qsa]
+RewriteRule ^user/update/([0-9]+)/?$ RestController.php?view=update&id=$1 [nc,qsa]
