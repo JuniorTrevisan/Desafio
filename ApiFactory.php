@@ -125,20 +125,16 @@
             }
         }    
         
-        /**
+       
+         /**
          * @author Claudemir Trevisan
          * Função para alterar um unico usuario pelo seu id
-         * @param: $id            int       -   id do usuario
-         * @param: $nome          string    -   nome do usuario.
-         * @param: $sobrenome     string    -   sobrenome do usuario
-         * @param: $email         string    -   email do usuario.
-         * @param: $telefone      string    -   telefone do usuario
-         * @param: $login         string    -   login do usuario.
-         * @param: $senha         string    -   senha do usuario
+         * @param: $id       int  -  id do usuario.       
+         * @param: $dados         obj       -   contendo : nome, sobrenome, email, telefone, login e senha do usuario
          */ 
-        public function upUser($id,$nome,$sobrenome,$email,$telefone,$login,$senha) {        
+        public function upUser($id,$dados) {        
             $User = new User();
-            $rawData = $User->upUser($id,$nome,$sobrenome,$email,$telefone,$login,$senha);
+            $rawData = $User->upUser($id,$dados);
 
             if(empty($rawData)) {
                 $statusCode = 404;
@@ -148,19 +144,14 @@
             }           
         } 
 
-        /**
+         /**
          * @author Claudemir Trevisan
          * Função para inserir um novo usuario        
-         * @param: $nome          string    -   nome do usuario.
-         * @param: $sobrenome     string    -   sobrenome do usuario
-         * @param: $email         string    -   email do usuario.
-         * @param: $telefone      string    -   telefone do usuario
-         * @param: $login         string    -   login do usuario.
-         * @param: $senha         string    -   senha do usuario
+         * @param: $dados         obj       -   contendo : nome, sobrenome, email, telefone, login e senha do usuario  
          */ 
-        function addUser($nome,$sobrenome,$email,$telefone,$login,$senha) {
+        function addUser($dados) {
             $User = new User();
-            $rawData = $User->addUser($nome,$sobrenome,$email,$telefone,$login,$senha);
+            $rawData = $User->addUser($dados);
 
             if(empty($rawData)) {
                 $statusCode = 404;

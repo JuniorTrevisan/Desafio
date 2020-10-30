@@ -22,7 +22,7 @@
             fclose($arq);
             $total = $tlinha - 1;
             for($ct=1;$ct<$total;$ct++){ 
-                $item = explode("|", $linha[$ct]);                     
+                $item = explode("|", $linha[$ct]);                 
                 $this->Users[$ct]['id'] = $item[0];
                 $this->Users[$ct]['nome'] = $item[1]; 
                 $this->Users[$ct]['sobrenome'] = $item[2];
@@ -90,16 +90,12 @@
         /**
          * @author Claudemir Trevisan
          * Função para alterar um unico usuario pelo seu id
-         * @param: $id            int       -   id do usuario
-         * @param: $nome          string    -   nome do usuario.
-         * @param: $sobrenome     string    -   sobrenome do usuario
-         * @param: $email         string    -   email do usuario.
-         * @param: $telefone      string    -   telefone do usuario
-         * @param: $login         string    -   login do usuario.
-         * @param: $senha         string    -   senha do usuario
+         * @param: $id       int  -  id do usuario.       
+         * @param: $dados         obj       -   contendo : nome, sobrenome, email, telefone, login e senha do usuario
          */ 
-        public function upUser($id,$nome,$sobrenome,$email,$telefone,$login,$senha){        
-            $data = $id . '|' . $nome . '|' . $sobrenome . '|' . $email . '|' . $telefone . '|' . $login . '|' . $senha ."\n";
+        public function upUser($id,$dados){
+            $array_dados = json_decode($dados);                  
+            $data = $id . '|' . $array_dados->nome . '|' . $array_dados->sobrenome . '|' . $array_dados->email . '|' . $array_dados->telefone . '|' . $array_dados->login . '|' . md5($array_dados->senha) ."\n";
             $arq = fopen('arquivo.txt', 'r');        
             $ct_lin = 1;
             $ct_up = 0;    
@@ -131,22 +127,18 @@
         /**
          * @author Claudemir Trevisan
          * Função para inserir um novo usuario        
-         * @param: $nome          string    -   nome do usuario.
-         * @param: $sobrenome     string    -   sobrenome do usuario
-         * @param: $email         string    -   email do usuario.
-         * @param: $telefone      string    -   telefone do usuario
-         * @param: $login         string    -   login do usuario.
-         * @param: $senha         string    -   senha do usuario
+         * @param: $dados         obj       -   contendo : nome, sobrenome, email, telefone, login e senha do usuario  
          */ 
-        public function addUser($nome,$sobrenome,$email,$telefone,$login,$senha){     
+        public function addUser($dados){     
             $linhas = 0; 
             $arq = fopen('arquivo.txt', 'r'); 
             while (!feof($arq)) { 
                 fgets($arq); 
                 $linhas++; 
             }                   
-            fclose($arq);                        
-            $data = $linhas . '|' . $nome . '|' . $sobrenome . '|' . $email . '|' . $telefone . '|' . $login . '|' . $senha ."\n";                                                
+            fclose($arq); 
+            $array_dados = json_decode($dados);                  
+            $data = $linhas . '|' . $array_dados->nome . '|' . $array_dados->sobrenome . '|' . $array_dados->email . '|' . $array_dados->telefone . '|' . $array_dados->login . '|' . md5($array_dados->senha) ."\n";    
             $arq2 = fopen("arquivo.txt", "a");                 
             fwrite($arq2,$data);
             fclose($arq2);            

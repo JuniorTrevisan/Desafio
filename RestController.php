@@ -12,7 +12,7 @@
     $view = "";
     if(isset($_GET["view"]))
         $view = $_GET["view"];
-
+    
     switch($view){
 
         case "all":
@@ -26,19 +26,21 @@
             $ApiFactory->getUser($_GET["id"]);
             break; 
         case "insert":
-            // redireciona REST Url /User/insert/
+            // redireciona REST Url /User/insert/<dados>           
+            $_REQUEST['dados'] = base64_decode($_REQUEST['dados']);    
             $ApiFactory = new ApiFactory();
-            $ApiFactory->addUser($_POST["nome"],$_POST['sobrenome'],$_POST['email'],$_POST['telefone'],$_POST['login'],$_POST['senha']);
+            $ApiFactory->addUser($_REQUEST['dados']);
             break;	    
         case "delete":
             // redireciona REST Url /User/delete/<email>/
             $ApiFactory = new ApiFactory();
             $ApiFactory->delUser($_GET["email"]);
             break;       
-        case "update":
-            // redireciona REST Url /User/update/<id>/       
+        case "update":      
+            // redireciona REST Url /User/update/<id>/<dados>  
+            $_REQUEST['dados'] = base64_decode($_REQUEST['dados']);    
             $ApiFactory = new ApiFactory();
-            $ApiFactory->upUser($_GET["id"],$_POST["nome"],$_POST['sobrenome'],$_POST['email'],$_POST['telefone'],$_POST['login'],$_POST['senha']);
+            $ApiFactory->upUser($_GET["id"],$_REQUEST['dados']);
             break;           
         case "" :
             //404 - not found;
